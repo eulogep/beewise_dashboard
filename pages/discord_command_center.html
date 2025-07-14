@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centre de Commande Discord - BeeWise Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbeewiseda6480back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">BeeWise</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Accueil</a>
+                    <a href="dashboard_demo.html" class="text-text-secondary hover:text-primary transition-smooth">Tableau de Bord</a>
+                    <a href="discord_command_center.html" class="text-primary font-medium">Centre de Commande</a>
+                    <a href="discord_integration_settings.html" class="text-text-secondary hover:text-primary transition-smooth">Configuration Discord</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-50 to-secondary-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="h-12 w-12 text-secondary mr-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h1 class="text-4xl font-bold text-text-primary">Centre de Commande Discord</h1>
+                </div>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Surveillez et gérez toutes les interactions Discord de votre bot BeeWise en temps réel depuis une interface centralisée.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Status Overview -->
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-xl shadow-card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-success rounded-full animate-pulse mr-2"></div>
+                            <span class="text-sm text-success font-medium">Actif</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-1">Bot Status</h3>
+                    <p class="text-sm text-text-secondary">Connecté depuis 2h 34min</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-primary font-medium">+12 aujourd'hui</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-1">147</h3>
+                    <p class="text-sm text-text-secondary">Commandes exécutées</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-secondary font-medium">2 serveurs</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-1">2,847</h3>
+                    <p class="text-sm text-text-secondary">Utilisateurs actifs</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-accent font-medium">2 actives</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-1">23</h3>
+                    <p class="text-sm text-text-secondary">Alertes envoyées</p>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Live Command Log -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-card p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-text-primary">Journal des Commandes en Direct</h2>
+                            <div class="flex items-center space-x-2">
+                                <button class="px-4 py-2 bg-primary-100 text-primary rounded-lg hover:bg-primary-200 transition-smooth">
+                                    <svg class="w-4 h-4 mr-2 inline" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    Pause
+                                </button>
+                                <button class="px-4 py-2 bg-secondary-100 text-secondary rounded-lg hover:bg-secondary-200 transition-smooth">
+                                    <svg class="w-4 h-4 mr-2 inline" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    Exporter
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 max-h-96 overflow-y-auto">
+                            <!-- Command Log Entries -->
+                            <div class="border-l-4 border-primary-300 bg-primary-50 p-4 rounded-r-lg">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-primary-200 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-primary font-medium text-sm">M</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Marie_Apicultrice</p>
+                                            <p class="text-sm text-text-secondary">#monitoring-general</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">14:23:15</span>
+                                </div>
+                                <div class="ml-11">
+                                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">!resume_live</p>
+                                    <p class="text-sm text-text-secondary">✅ Commande exécutée avec succès</p>
+                                </div>
+                            </div>
+                            
+                            <div class="border-l-4 border-secondary-300 bg-secondary-50 p-4 rounded-r-lg">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-secondary-200 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-secondary font-medium text-sm">P</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Pierre_Ruches</p>
+                                            <p class="text-sm text-text-secondary">#support-beewise</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">14:21:42</span>
+                                </div>
+                                <div class="ml-11">
+                                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">!status ruche_003</p>
+                                    <p class="text-sm text-text-secondary">✅ Statut de la ruche #003 affiché</p>
+                                </div>
+                            </div>
+                            
+                            <div class="border-l-4 border-accent-300 bg-accent-50 p-4 rounded-r-lg">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-accent-200 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-accent font-medium text-sm">A</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Auto-Alert</p>
+                                            <p class="text-sm text-text-secondary">#alertes-urgence</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">14:18:30</span>
+                                </div>
+                                <div class="ml-11">
+                                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">🚨 Température élevée - Ruche #007</p>
+                                    <p class="text-sm text-text-secondary">🔔 Notification automatique envoyée</p>
+                                </div>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary-300 bg-primary-50 p-4 rounded-r-lg">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-primary-200 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-primary font-medium text-sm">J</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Jean_Novice</p>
+                                            <p class="text-sm text-text-secondary">#aide-apiculteurs</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">14:15:18</span>
+                                </div>
+                                <div class="ml-11">
+                                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">!aide</p>
+                                    <p class="text-sm text-text-secondary">✅ Liste des commandes affichée</p>
+                                </div>
+                            </div>
+                            
+                            <div class="border-l-4 border-secondary-300 bg-secondary-50 p-4 rounded-r-lg">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-secondary-200 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-secondary font-medium text-sm">L</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Lucie_Pro</p>
+                                            <p class="text-sm text-text-secondary">#analytics-ruches</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">14:12:55</span>
+                                </div>
+                                <div class="ml-11">
+                                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">!graph_global</p>
+                                    <p class="text-sm text-text-secondary">📊 Graphique global généré</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions & Analytics -->
+                <div class="space-y-6">
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-xl shadow-card p-6">
+                        <h3 class="text-xl font-bold text-text-primary mb-4">Actions Rapides</h3>
+                        <div class="space-y-3">
+                            <button onclick="executeCommand('!aide')" class="w-full px-4 py-3 bg-primary-50 text-primary rounded-lg hover:bg-primary-100 transition-smooth text-left">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">!aide</span>
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button onclick="executeCommand('!resume_live')" class="w-full px-4 py-3 bg-secondary-50 text-secondary rounded-lg hover:bg-secondary-100 transition-smooth text-left">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">!resume_live</span>
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button onclick="executeCommand('!alertes')" class="w-full px-4 py-3 bg-accent-50 text-accent rounded-lg hover:bg-accent-100 transition-smooth text-left">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">!alertes</span>
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button onclick="executeCommand('!graph_global')" class="w-full px-4 py-3 bg-success-50 text-success rounded-lg hover:bg-success-100 transition-smooth text-left">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">!graph_global</span>
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Command Analytics -->
+                    <div class="bg-white rounded-xl shadow-card p-6">
+                        <h3 class="text-xl font-bold text-text-primary mb-4">Statistiques des Commandes</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-primary rounded-full mr-3"></span>
+                                    <span class="text-sm text-text-secondary">!resume_live</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-16 h-2 bg-gray-200 rounded-full mr-3">
+                                        <div class="w-12 h-2 bg-primary rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-text-primary">47</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-secondary rounded-full mr-3"></span>
+                                    <span class="text-sm text-text-secondary">!status</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-16 h-2 bg-gray-200 rounded-full mr-3">
+                                        <div class="w-10 h-2 bg-secondary rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-text-primary">32</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-accent rounded-full mr-3"></span>
+                                    <span class="text-sm text-text-secondary">!alertes</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-16 h-2 bg-gray-200 rounded-full mr-3">
+                                        <div class="w-8 h-2 bg-accent rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-text-primary">23</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-success rounded-full mr-3"></span>
+                                    <span class="text-sm text-text-secondary">!aide</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-16 h-2 bg-gray-200 rounded-full mr-3">
+                                        <div class="w-6 h-2 bg-success rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-text-primary">18</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-warning rounded-full mr-3"></span>
+                                    <span class="text-sm text-text-secondary">!graph_global</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-16 h-2 bg-gray-200 rounded-full mr-3">
+                                        <div class="w-4 h-2 bg-warning rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-text-primary">12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Real-time Data Stream -->
+                    <div class="bg-white rounded-xl shadow-card p-6">
+                        <h3 class="text-xl font-bold text-text-primary mb-4">Données en Temps Réel</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                <div>
+                                    <p class="font-medium text-text-primary">Ruche #001</p>
+                                    <p class="text-sm text-text-secondary">Temp: 35.2°C • Humidité: 65%</p>
+                                </div>
+                                <div class="w-3 h-3 bg-success rounded-full animate-pulse"></div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                <div>
+                                    <p class="font-medium text-text-primary">Ruche #003</p>
+                                    <p class="text-sm text-text-secondary">Temp: 34.8°C • Humidité: 62%</p>
+                                </div>
+                                <div class="w-3 h-3 bg-success rounded-full animate-pulse"></div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-warning-50 rounded-lg">
+                                <div>
+                                    <p class="font-medium text-text-primary">Ruche #007</p>
+                                    <p class="text-sm text-text-secondary">Temp: 38.1°C • Humidité: 58%</p>
+                                </div>
+                                <div class="w-3 h-3 bg-warning rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emergency Controls -->
+            <div class="mt-8 bg-gradient-to-r from-accent-600 to-accent-700 rounded-xl p-8">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">Contrôles d'Urgence</h2>
+                    <p class="text-white/90 mb-6">Diffusez immédiatement des alertes critiques à tous les channels Discord configurés</p>
+                    <div class="flex justify-center space-x-4">
+                        <button onclick="sendEmergencyBroadcast()" class="bg-white text-accent px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-smooth">
+                            <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            Diffusion d'Urgence
+                        </button>
+                        <button onclick="pauseNotifications()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-accent transition-smooth">
+                            <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            Pause Notifications
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold">BeeWise</span>
+                </div>
+                <p class="text-gray-300">&copy; 2025 BeeWise. Surveillance intelligente des ruches.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Real-time updates simulation
+        function updateCommandLog() {
+            const commandLog = document.querySelector('.space-y-4.max-h-96');
+            const commands = ['!aide', '!resume_live', '!status', '!alertes', '!graph_global'];
+            const users = ['Marie_Apicultrice', 'Pierre_Ruches', 'Jean_Novice', 'Lucie_Pro'];
+            const channels = ['#monitoring-general', '#support-beewise', '#aide-apiculteurs', '#analytics-ruches'];
+            
+            const randomCommand = commands[Math.floor(Math.random() * commands.length)];
+            const randomUser = users[Math.floor(Math.random() * users.length)];
+            const randomChannel = channels[Math.floor(Math.random() * channels.length)];
+            const timestamp = new Date().toLocaleTimeString('fr-FR');
+            
+            const newEntry = document.createElement('div');
+            newEntry.className = 'border-l-4 border-primary-300 bg-primary-50 p-4 rounded-r-lg';
+            newEntry.innerHTML = `
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-primary-200 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-medium text-sm">${randomUser.charAt(0)}</span>
+                        </div>
+                        <div>
+                            <p class="font-medium text-text-primary">${randomUser}</p>
+                            <p class="text-sm text-text-secondary">${randomChannel}</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-text-secondary">${timestamp}</span>
+                </div>
+                <div class="ml-11">
+                    <p class="text-sm font-mono bg-white px-3 py-1 rounded mb-2">${randomCommand}</p>
+                    <p class="text-sm text-text-secondary">✅ Commande exécutée avec succès</p>
+                </div>
+            `;
+            
+            commandLog.insertBefore(newEntry, commandLog.firstChild);
+            
+            // Keep only last 6 entries
+            if (commandLog.children.length > 6) {
+                commandLog.removeChild(commandLog.lastChild);
+            }
+        }
+        
+        function executeCommand(command) {
+            // Simulate command execution
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-success text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Commande ${command} exécutée
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        function sendEmergencyBroadcast() {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-accent text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Diffusion d'urgence envoyée
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        function pauseNotifications() {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-warning text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Notifications mises en pause
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Update command log every 30 seconds
+        setInterval(updateCommandLog, 30000);
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

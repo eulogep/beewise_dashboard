@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Démo Dashboard - BeeWise Surveillance Intelligente</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbeewiseda6480back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">BeeWise</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Accueil</a>
+                    <a href="product_features.html" class="text-text-secondary hover:text-primary transition-smooth">Fonctionnalités</a>
+                    <a href="solutions_by_user_type.html" class="text-text-secondary hover:text-primary transition-smooth">Solutions</a>
+                    <a href="pricing.html" class="text-text-secondary hover:text-primary transition-smooth">Tarifs</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-smooth">Centre de Connaissances</a>
+                    <a href="dashboard_demo.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-smooth">Démo</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Introduction Banner -->
+    <section class="bg-gradient-to-r from-primary-50 to-secondary-50 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center bg-primary-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                    DÉMO INTERACTIVE
+                </div>
+                <h1 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+                    Explorez le Dashboard BeeWise
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Découvrez comment notre interface transforme les données de vos ruches en insights exploitables. 
+                    Toutes les fonctionnalités sont interactives avec des données réalistes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Demo Interface -->
+    <section class="py-8 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Dashboard Navigation Tabs -->
+            <div class="bg-white rounded-lg shadow-card mb-6">
+                <div class="border-b border-border">
+                    <nav class="flex space-x-8 px-6">
+                        <button class="py-4 px-2 border-b-2 border-primary text-primary font-medium text-sm" id="live-tab">
+                            Tableau de Bord Live
+                        </button>
+                        <button class="py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary font-medium text-sm transition-smooth" id="hives-tab">
+                            Profils Ruches
+                        </button>
+                        <button class="py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary font-medium text-sm transition-smooth" id="analytics-tab">
+                            Studio Analytics
+                        </button>
+                        <button class="py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary font-medium text-sm transition-smooth" id="alerts-tab">
+                            Gestion Alertes
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Live Dashboard Tab Content -->
+            <div id="live-content" class="tab-content">
+                <!-- Quick Stats Overview -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-card">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-text-secondary text-sm">Ruches Actives</p>
+                                <p class="text-2xl font-bold text-text-primary">12/15</p>
+                            </div>
+                            <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-card">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-text-secondary text-sm">Alertes Critiques</p>
+                                <p class="text-2xl font-bold text-accent">2</p>
+                            </div>
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-card">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-text-secondary text-sm">Température Moy.</p>
+                                <p class="text-2xl font-bold text-primary">34.8°C</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-card">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-text-secondary text-sm">Production Est.</p>
+                                <p class="text-2xl font-bold text-secondary">+18%</p>
+                            </div>
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Hive Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Hive Cards -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl p-6 shadow-card">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-text-primary">Surveillance Ruches en Temps Réel</h3>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                                    <span class="text-sm text-success font-medium">Mise à jour: 14/07/2025 07:32</span>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Hive 001 - Critical -->
+                                <div class="border-2 border-accent rounded-lg p-4 cursor-pointer hover:shadow-card-strong transition-smooth hive-card" data-hive="001">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h4 class="font-semibold text-text-primary">Ruche #001</h4>
+                                        <span class="bg-accent-100 text-accent px-2 py-1 rounded text-xs font-medium">CRITIQUE</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Température</span>
+                                            <p class="font-semibold text-accent">42.1°C</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Humidité</span>
+                                            <p class="font-semibold text-warning">78%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Activité</span>
+                                            <p class="font-semibold text-accent">Très Élevée</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Score Santé</span>
+                                            <p class="font-semibold text-accent">45%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hive 003 - Optimal -->
+                                <div class="border-2 border-success rounded-lg p-4 cursor-pointer hover:shadow-card-strong transition-smooth hive-card" data-hive="003">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h4 class="font-semibold text-text-primary">Ruche #003</h4>
+                                        <span class="bg-success-100 text-success px-2 py-1 rounded text-xs font-medium">OPTIMAL</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Température</span>
+                                            <p class="font-semibold text-success">35.2°C</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Humidité</span>
+                                            <p class="font-semibold text-success">62%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Activité</span>
+                                            <p class="font-semibold text-success">Normale</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Score Santé</span>
+                                            <p class="font-semibold text-success">94%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hive 007 - Warning -->
+                                <div class="border-2 border-warning rounded-lg p-4 cursor-pointer hover:shadow-card-strong transition-smooth hive-card" data-hive="007">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h4 class="font-semibold text-text-primary">Ruche #007</h4>
+                                        <span class="bg-warning-100 text-warning px-2 py-1 rounded text-xs font-medium">ATTENTION</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Température</span>
+                                            <p class="font-semibold text-warning">38.7°C</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Humidité</span>
+                                            <p class="font-semibold text-warning">71%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Activité</span>
+                                            <p class="font-semibold text-warning">Élevée</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Score Santé</span>
+                                            <p class="font-semibold text-warning">73%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hive 012 - Good -->
+                                <div class="border-2 border-secondary rounded-lg p-4 cursor-pointer hover:shadow-card-strong transition-smooth hive-card" data-hive="012">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h4 class="font-semibold text-text-primary">Ruche #012</h4>
+                                        <span class="bg-secondary-100 text-secondary px-2 py-1 rounded text-xs font-medium">BON</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Température</span>
+                                            <p class="font-semibold text-secondary">33.8°C</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Humidité</span>
+                                            <p class="font-semibold text-secondary">58%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Activité</span>
+                                            <p class="font-semibold text-secondary">Modérée</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Score Santé</span>
+                                            <p class="font-semibold text-secondary">87%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Alerts Stream -->
+                    <div class="bg-white rounded-xl p-6 shadow-card">
+                        <h3 class="text-lg font-semibold text-text-primary mb-4">Flux d'Alertes Live</h3>
+                        <div class="space-y-3" id="alerts-stream">
+                            <div class="flex items-start p-3 bg-accent-50 rounded-lg border-l-4 border-accent">
+                                <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 animate-pulse"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-text-primary">Ruche #001 - Surchauffe détectée</p>
+                                    <p class="text-xs text-text-secondary">42.1°C - Seuil critique dépassé</p>
+                                    <p class="text-xs text-text-secondary">Il y a 2 min</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-warning-50 rounded-lg border-l-4 border-warning">
+                                <div class="w-2 h-2 bg-warning rounded-full mt-2 mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-text-primary">Ruche #007 - Humidité élevée</p>
+                                    <p class="text-xs text-text-secondary">71% - Surveillance renforcée</p>
+                                    <p class="text-xs text-text-secondary">Il y a 8 min</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-success-50 rounded-lg border-l-4 border-success">
+                                <div class="w-2 h-2 bg-success rounded-full mt-2 mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-text-primary">Ruche #003 - Conditions optimales</p>
+                                    <p class="text-xs text-text-secondary">Tous paramètres normaux</p>
+                                    <p class="text-xs text-text-secondary">Il y a 15 min</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-secondary-50 rounded-lg border-l-4 border-secondary">
+                                <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-text-primary">Ruche #012 - Production stable</p>
+                                    <p class="text-xs text-text-secondary">Activité dans la normale</p>
+                                    <p class="text-xs text-text-secondary">Il y a 23 min</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert Simulation Button -->
+                        <button class="w-full mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-smooth text-sm font-medium" id="simulate-alert">
+                            Simuler Nouvelle Alerte
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Customizable Widgets Section -->
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-text-primary">Widgets Personnalisables</h3>
+                        <div class="text-sm text-text-secondary bg-surface px-3 py-1 rounded-full">
+                            Glissez-déposez pour réorganiser
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="widgets-container">
+                        <!-- Temperature Chart Widget -->
+                        <div class="widget-card bg-surface rounded-lg p-4 cursor-move border-2 border-transparent hover:border-primary transition-smooth" draggable="true">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-medium text-text-primary">Tendance Température</h4>
+                                <svg class="w-4 h-4 text-text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6L6 10l4 4 4-4-4-4z"/>
+                                </svg>
+                            </div>
+                            <div class="h-24 bg-gradient-to-r from-primary-100 to-primary-200 rounded flex items-center justify-center">
+                                <div class="text-center">
+                                    <p class="text-lg font-bold text-primary">35.2°C</p>
+                                    <p class="text-xs text-text-secondary">Moyenne 24h</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Humidity Widget -->
+                        <div class="widget-card bg-surface rounded-lg p-4 cursor-move border-2 border-transparent hover:border-primary transition-smooth" draggable="true">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-medium text-text-primary">Humidité Globale</h4>
+                                <svg class="w-4 h-4 text-text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6L6 10l4 4 4-4-4-4z"/>
+                                </svg>
+                            </div>
+                            <div class="h-24 bg-gradient-to-r from-secondary-100 to-secondary-200 rounded flex items-center justify-center">
+                                <div class="text-center">
+                                    <p class="text-lg font-bold text-secondary">63%</p>
+                                    <p class="text-xs text-text-secondary">Optimal: 60-65%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Monitor Widget -->
+                        <div class="widget-card bg-surface rounded-lg p-4 cursor-move border-2 border-transparent hover:border-primary transition-smooth" draggable="true">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-medium text-text-primary">Activité Colonies</h4>
+                                <svg class="w-4 h-4 text-text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6L6 10l4 4 4-4-4-4z"/>
+                                </svg>
+                            </div>
+                            <div class="h-24 bg-gradient-to-r from-accent-100 to-accent-200 rounded flex items-center justify-center">
+                                <div class="text-center">
+                                    <p class="text-lg font-bold text-accent">Élevée</p>
+                                    <p class="text-xs text-text-secondary">Pic saisonnier</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hive Profiles Tab Content -->
+            <div id="hives-content" class="tab-content hidden">
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <h3 class="text-lg font-semibold text-text-primary mb-6">Profils Détaillés des Ruches</h3>
+                    
+                    <!-- Detailed Hive Analysis -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="font-semibold text-text-primary">Ruche #001 - Analyse Critique</h4>
+                                    <span class="bg-accent-100 text-accent px-3 py-1 rounded-full text-sm font-medium">Action Requise</span>
+                                </div>
+                                
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-text-secondary">Score Santé Global</span>
+                                        <div class="flex items-center">
+                                            <div class="w-20 h-2 bg-gray-200 rounded-full mr-2">
+                                                <div class="w-9 h-2 bg-accent rounded-full"></div>
+                                            </div>
+                                            <span class="text-accent font-semibold">45%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Dernière Inspection</span>
+                                            <p class="font-medium">12/07/2025</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Reine Présente</span>
+                                            <p class="font-medium text-success">Confirmée</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Population Est.</span>
+                                            <p class="font-medium">45,000 abeilles</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Production Miel</span>
+                                            <p class="font-medium text-warning">-23% vs normale</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Recommandations IA</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-start">
+                                        <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3"></div>
+                                        <p class="text-sm text-text-primary">Intervention immédiate requise - Température critique</p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-2 h-2 bg-warning rounded-full mt-2 mr-3"></div>
+                                        <p class="text-sm text-text-primary">Vérifier ventilation et ombrage de la ruche</p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3"></div>
+                                        <p class="text-sm text-text-primary">Surveillance renforcée recommandée 48h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Historique 7 Jours</h4>
+                                <div class="h-40 bg-gradient-to-t from-accent-50 to-accent-100 rounded-lg flex items-end justify-center p-4">
+                                    <div class="text-center">
+                                        <p class="text-sm text-text-secondary mb-2">Évolution Température</p>
+                                        <div class="flex items-end space-x-1">
+                                            <div class="w-4 h-8 bg-success rounded-t"></div>
+                                            <div class="w-4 h-10 bg-success rounded-t"></div>
+                                            <div class="w-4 h-12 bg-warning rounded-t"></div>
+                                            <div class="w-4 h-16 bg-warning rounded-t"></div>
+                                            <div class="w-4 h-20 bg-accent rounded-t"></div>
+                                            <div class="w-4 h-24 bg-accent rounded-t"></div>
+                                            <div class="w-4 h-28 bg-accent rounded-t"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Actions Rapides</h4>
+                                <div class="space-y-2">
+                                    <button class="w-full bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-600 transition-smooth text-sm font-medium">
+                                        Déclencher Alerte Urgente
+                                    </button>
+                                    <button class="w-full bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-600 transition-smooth text-sm font-medium">
+                                        Programmer Inspection
+                                    </button>
+                                    <button class="w-full border border-border text-text-primary py-2 px-4 rounded-lg hover:bg-surface transition-smooth text-sm font-medium">
+                                        Exporter Données
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Studio Tab Content -->
+            <div id="analytics-content" class="tab-content hidden">
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <h3 class="text-lg font-semibold text-text-primary mb-6">Studio d'Analyse Avancée</h3>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Comparative Analysis -->
+                        <div class="lg:col-span-2 space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Analyse Comparative Multi-Ruches</h4>
+                                <div class="h-48 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg flex items-center justify-center">
+                                    <div class="text-center">
+                                        <svg class="w-16 h-16 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                        </svg>
+                                        <p class="text-text-secondary">Graphique interactif de performance</p>
+                                        <p class="text-sm text-text-secondary">Comparaison sur 30 jours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Prédictions Saisonnières</h4>
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="text-center p-3 bg-success-50 rounded-lg">
+                                        <p class="text-sm text-text-secondary">Production Estimée</p>
+                                        <p class="text-lg font-bold text-success">+18%</p>
+                                        <p class="text-xs text-text-secondary">vs année dernière</p>
+                                    </div>
+                                    <div class="text-center p-3 bg-warning-50 rounded-lg">
+                                        <p class="text-sm text-text-secondary">Risque Essaimage</p>
+                                        <p class="text-lg font-bold text-warning">Modéré</p>
+                                        <p class="text-xs text-text-secondary">Août-Septembre</p>
+                                    </div>
+                                    <div class="text-center p-3 bg-secondary-50 rounded-lg">
+                                        <p class="text-sm text-text-secondary">Santé Globale</p>
+                                        <p class="text-lg font-bold text-secondary">Bonne</p>
+                                        <p class="text-xs text-text-secondary">Tendance stable</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analytics Controls -->
+                        <div class="space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Filtres d'Analyse</h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-sm text-text-secondary mb-1">Période</label>
+                                        <select class="w-full border border-border rounded-lg px-3 py-2 text-sm">
+                                            <option>7 derniers jours</option>
+                                            <option>30 derniers jours</option>
+                                            <option>3 derniers mois</option>
+                                            <option>Année complète</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm text-text-secondary mb-1">Métriques</label>
+                                        <div class="space-y-2">
+                                            <label class="flex items-center">
+                                                <input type="checkbox" checked class="mr-2" />
+                                                <span class="text-sm">Température</span>
+                                            </label>
+                                            <label class="flex items-center">
+                                                <input type="checkbox" checked class="mr-2" />
+                                                <span class="text-sm">Humidité</span>
+                                            </label>
+                                            <label class="flex items-center">
+                                                <input type="checkbox" class="mr-2" />
+                                                <span class="text-sm">Activité</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Export Données</h4>
+                                <div class="space-y-2">
+                                    <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-smooth text-sm font-medium">
+                                        Export PDF
+                                    </button>
+                                    <button class="w-full bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-600 transition-smooth text-sm font-medium">
+                                        Export CSV
+                                    </button>
+                                    <button class="w-full border border-border text-text-primary py-2 px-4 rounded-lg hover:bg-surface transition-smooth text-sm font-medium">
+                                        Rapport Personnalisé
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Management Tab Content -->
+            <div id="alerts-content" class="tab-content hidden">
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <h3 class="text-lg font-semibold text-text-primary mb-6">Centre de Gestion des Alertes</h3>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Alert Configuration -->
+                        <div class="space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Configuration des Seuils</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm text-text-secondary mb-2">Température Critique (°C)</label>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="range" min="35" max="45" value="40" class="flex-1" />
+                                            <span class="text-sm font-medium text-accent">40°C</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm text-text-secondary mb-2">Humidité Maximum (%)</label>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="range" min="60" max="80" value="70" class="flex-1" />
+                                            <span class="text-sm font-medium text-warning">70%</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm text-text-secondary mb-2">Score Santé Minimum (%)</label>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="range" min="40" max="80" value="60" class="flex-1" />
+                                            <span class="text-sm font-medium text-secondary">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Canaux de Notification</h4>
+                                <div class="space-y-3">
+                                    <label class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" checked class="mr-3" />
+                                            <div>
+                                                <p class="text-sm font-medium">Discord</p>
+                                                <p class="text-xs text-text-secondary">#beewise-alerts</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Connecté</span>
+                                    </label>
+                                    <label class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" checked class="mr-3" />
+                                            <div>
+                                                <p class="text-sm font-medium">SMS</p>
+                                                <p class="text-xs text-text-secondary">+33 6 12 34 56 78</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Actif</span>
+                                    </label>
+                                    <label class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" checked class="mr-3" />
+                                            <div>
+                                                <p class="text-sm font-medium">Email</p>
+                                                <p class="text-xs text-text-secondary">apiculteur@example.fr</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Configuré</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert History -->
+                        <div class="space-y-6">
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Historique des Alertes</h4>
+                                <div class="space-y-3 max-h-64 overflow-y-auto">
+                                    <div class="flex items-start p-3 bg-accent-50 rounded-lg">
+                                        <div class="w-3 h-3 bg-accent rounded-full mt-1 mr-3"></div>
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium">Température critique - Ruche #001</p>
+                                            <p class="text-xs text-text-secondary">42.1°C détectée - Notification envoyée</p>
+                                            <p class="text-xs text-text-secondary">14/07/2025 07:30</p>
+                                        </div>
+                                        <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Critique</span>
+                                    </div>
+                                    
+                                    <div class="flex items-start p-3 bg-warning-50 rounded-lg">
+                                        <div class="w-3 h-3 bg-warning rounded-full mt-1 mr-3"></div>
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium">Humidité élevée - Ruche #007</p>
+                                            <p class="text-xs text-text-secondary">71% mesurée - Surveillance activée</p>
+                                            <p class="text-xs text-text-secondary">14/07/2025 07:24</p>
+                                        </div>
+                                        <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Attention</span>
+                                    </div>
+                                    
+                                    <div class="flex items-start p-3 bg-success-50 rounded-lg">
+                                        <div class="w-3 h-3 bg-success rounded-full mt-1 mr-3"></div>
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium">Retour à la normale - Ruche #005</p>
+                                            <p class="text-xs text-text-secondary">Température stabilisée à 35.2°C</p>
+                                            <p class="text-xs text-text-secondary">14/07/2025 06:45</p>
+                                        </div>
+                                        <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Résolu</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-border rounded-lg p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Test des Notifications</h4>
+                                <div class="space-y-2">
+                                    <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-smooth text-sm font-medium">
+                                        Test Discord
+                                    </button>
+                                    <button class="w-full bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-600 transition-smooth text-sm font-medium">
+                                        Test SMS
+                                    </button>
+                                    <button class="w-full bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-600 transition-smooth text-sm font-medium">
+                                        Test Email
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Features -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Fonctionnalités Interactives</h2>
+                <p class="text-xl text-text-secondary">Explorez toutes les capacités de BeeWise</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-surface rounded-xl">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Données Temps Réel</h3>
+                    <p class="text-text-secondary">Surveillance continue avec mises à jour instantanées</p>
+                </div>
+                
+                <div class="text-center p-6 bg-surface rounded-xl">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Interface Personnalisable</h3>
+                    <p class="text-text-secondary">Widgets modulaires adaptés à vos besoins</p>
+                </div>
+                
+                <div class="text-center p-6 bg-surface rounded-xl">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM8 15v-3a1 1 0 011-1h2a1 1 0 011 1v3H8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Alertes Intelligentes</h3>
+                    <p class="text-text-secondary">Notifications multi-canaux avec escalade automatique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                Prêt à Transformer Votre Apiculture ?
+            </h2>
+            <p class="text-xl opacity-90 mb-8">
+                Cette démo vous a donné un aperçu des possibilités. Découvrez la version complète avec vos propres données.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pricing.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-smooth shadow-card">
+                    Commencer l'Essai Gratuit
+                </a>
+                <a href="product_features.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Voir Toutes les Fonctionnalités
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                        </svg>
+                        <span class="text-xl font-bold">BeeWise</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Surveillance intelligente des ruches pour une apiculture moderne et durable.
+                    </p>
+                </div>
+                
+                <!-- Product Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="product_features.html" class="hover:text-primary transition-smooth">Fonctionnalités</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-smooth">Tarifs</a></li>
+                        <li><a href="dashboard_demo.html" class="hover:text-primary transition-smooth">Démo</a></li>
+                        <li><a href="solutions_by_user_type.html" class="hover:text-primary transition-smooth">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="knowledge_center.html" class="hover:text-primary transition-smooth">Centre de Connaissances</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Documentation API</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Guides</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>support@beewise.fr</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 BeeWise. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Demo -->
+    <script>
+        // Tab switching functionality
+        const tabs = ['live', 'hives', 'analytics', 'alerts'];
+        
+        tabs.forEach(tab => {
+            document.getElementById(`${tab}-tab`).addEventListener('click', () => {
+                // Hide all content
+                tabs.forEach(t => {
+                    document.getElementById(`${t}-content`).classList.add('hidden');
+                    document.getElementById(`${t}-tab`).classList.remove('border-primary', 'text-primary');
+                    document.getElementById(`${t}-tab`).classList.add('border-transparent', 'text-text-secondary');
+                });
+                
+                // Show selected content
+                document.getElementById(`${tab}-content`).classList.remove('hidden');
+                document.getElementById(`${tab}-tab`).classList.add('border-primary', 'text-primary');
+                document.getElementById(`${tab}-tab`).classList.remove('border-transparent', 'text-text-secondary');
+            });
+        });
+
+        // Hive card click functionality
+        document.querySelectorAll('.hive-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const hiveId = card.dataset.hive;
+                // Switch to hives tab and show detailed view
+                document.getElementById('hives-tab').click();
+                
+                // Add visual feedback
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Alert simulation
+        document.getElementById('simulate-alert').addEventListener('click', () => {
+            const alertsStream = document.getElementById('alerts-stream');
+            const newAlert = document.createElement('div');
+            newAlert.className = 'flex items-start p-3 bg-warning-50 rounded-lg border-l-4 border-warning';
+            newAlert.innerHTML = `
+                <div class="w-2 h-2 bg-warning rounded-full mt-2 mr-3 animate-pulse"></div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-text-primary">Ruche #009 - Activité inhabituelle</p>
+                    <p class="text-xs text-text-secondary">Pic d'activité détecté - Vérification recommandée</p>
+                    <p class="text-xs text-text-secondary">À l'instant</p>
+                </div>
+            `;
+            
+            alertsStream.insertBefore(newAlert, alertsStream.firstChild);
+            
+            // Remove oldest alert if more than 4
+            if (alertsStream.children.length > 4) {
+                alertsStream.removeChild(alertsStream.lastChild);
+            }
+        });
+
+        // Widget drag and drop simulation
+        let draggedElement = null;
+
+        document.querySelectorAll('.widget-card').forEach(widget => {
+            widget.addEventListener('dragstart', (e) => {
+                draggedElement = e.target;
+                e.target.style.opacity = '0.5';
+            });
+
+            widget.addEventListener('dragend', (e) => {
+                e.target.style.opacity = '1';
+                draggedElement = null;
+            });
+
+            widget.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            widget.addEventListener('drop', (e) => {
+                e.preventDefault();
+                if (draggedElement && draggedElement !== e.target) {
+                    const container = document.getElementById('widgets-container');
+                    const draggedIndex = Array.from(container.children).indexOf(draggedElement);
+                    const targetIndex = Array.from(container.children).indexOf(e.target);
+                    
+                    if (draggedIndex < targetIndex) {
+                        container.insertBefore(draggedElement, e.target.nextSibling);
+                    } else {
+                        container.insertBefore(draggedElement, e.target);
+                    }
+                }
+            });
+        });
+
+        // Real-time data simulation
+        function updateRealTimeData() {
+            const hiveCards = document.querySelectorAll('.hive-card');
+            hiveCards.forEach(card => {
+                const tempElement = card.querySelector('p.font-semibold');
+                if (tempElement && tempElement.textContent.includes('°C')) {
+                    const currentTemp = parseFloat(tempElement.textContent);
+                    const variation = (Math.random() - 0.5) * 0.4;
+                    const newTemp = (currentTemp + variation).toFixed(1);
+                    tempElement.textContent = `${newTemp}°C`;
+                }
+            });
+        }
+
+        // Update data every 5 seconds
+        setInterval(updateRealTimeData, 5000);
+
+        // Threshold slider updates
+        document.querySelectorAll('input[type="range"]').forEach(slider => {
+            slider.addEventListener('input', (e) => {
+                const value = e.target.value;
+                const unit = e.target.nextElementSibling.textContent.includes('°C') ? '°C' : '%';
+                e.target.nextElementSibling.textContent = `${value}${unit}`;
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

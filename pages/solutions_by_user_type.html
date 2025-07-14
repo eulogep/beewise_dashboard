@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions par Type d'Utilisateur - BeeWise Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbeewiseda6480back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">BeeWise</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Accueil</a>
+                    <a href="product_features.html" class="text-text-secondary hover:text-primary transition-smooth">Fonctionnalités</a>
+                    <a href="solutions_by_user_type.html" class="text-primary font-medium">Solutions</a>
+                    <a href="pricing.html" class="text-text-secondary hover:text-primary transition-smooth">Tarifs</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-smooth">Centre de Connaissances</a>
+                    <a href="dashboard_demo.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-smooth">Démo</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+                    Solutions Adaptées à 
+                    <span class="text-primary">Chaque Apiculteur</span>
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Que vous soyez professionnel, passionné, consultant ou chercheur, BeeWise s'adapte à vos besoins spécifiques avec des outils et fonctionnalités sur mesure.
+                </p>
+            </div>
+            
+            <!-- User Type Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="scrollToSection('commercial')" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow-card hover:shadow-card-strong transition-smooth">
+                    Apiculteurs Commerciaux
+                </button>
+                <button onclick="scrollToSection('hobbyist')" class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold shadow-card hover:shadow-card-strong transition-smooth">
+                    Apiculteurs Passionnés
+                </button>
+                <button onclick="scrollToSection('consultant')" class="bg-white text-accent px-6 py-3 rounded-lg font-semibold shadow-card hover:shadow-card-strong transition-smooth">
+                    Consultants Agricoles
+                </button>
+                <button onclick="scrollToSection('research')" class="bg-white text-success px-6 py-3 rounded-lg font-semibold shadow-card hover:shadow-card-strong transition-smooth">
+                    Instituts de Recherche
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Beekeepers Section -->
+    <section id="commercial" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Content -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                            Apiculteurs Commerciaux
+                        </h2>
+                    </div>
+                    
+                    <p class="text-xl text-text-secondary mb-8">
+                        Solutions enterprise pour les opérations gérant 50+ ruches avec des outils d'optimisation ROI, de maintenance prédictive et d'intégration système.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Monitoring Enterprise</h3>
+                                <p class="text-text-secondary">Surveillance simultanée de centaines de ruches avec alertes hiérarchisées et tableaux de bord personnalisables.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Rapports Automatisés</h3>
+                                <p class="text-text-secondary">Génération automatique de rapports de performance, analyses de tendances et recommandations d'optimisation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Intégration Système</h3>
+                                <p class="text-text-secondary">Connectivité avec vos outils de gestion agricole existants et systèmes ERP pour une vue d'ensemble complète.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="dashboard_demo.html" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-smooth text-center">
+                            Démo Enterprise
+                        </a>
+                        <a href="pricing.html" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-smooth text-center">
+                            Tarifs Pro
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Dashboard Preview -->
+                <div class="relative">
+                    <div class="bg-surface rounded-2xl shadow-card-strong p-6">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-text-primary mb-4">Tableau de Bord Enterprise</h3>
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <div class="bg-white rounded-lg p-4 text-center shadow-card">
+                                    <p class="text-2xl font-bold text-primary">247</p>
+                                    <p class="text-sm text-text-secondary">Ruches Actives</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center shadow-card">
+                                    <p class="text-2xl font-bold text-success">94.2%</p>
+                                    <p class="text-sm text-text-secondary">Santé Moyenne</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center shadow-card">
+                                    <p class="text-2xl font-bold text-secondary">€47.3K</p>
+                                    <p class="text-sm text-text-secondary">ROI Mensuel</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert Management -->
+                        <div class="bg-white rounded-lg p-4 shadow-card">
+                            <h4 class="font-semibold text-text-primary mb-3">Gestion des Alertes</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between p-2 bg-success-50 rounded">
+                                    <span class="text-sm">Ruches Secteur A</span>
+                                    <span class="bg-success text-white px-2 py-1 rounded text-xs">Normal</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 bg-warning-50 rounded">
+                                    <span class="text-sm">Ruches Secteur B</span>
+                                    <span class="bg-warning text-white px-2 py-1 rounded text-xs">Attention</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 bg-primary-50 rounded">
+                                    <span class="text-sm">Ruches Secteur C</span>
+                                    <span class="bg-primary text-white px-2 py-1 rounded text-xs">Optimal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study -->
+            <div class="mt-16 bg-primary-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-text-primary mb-4">Cas d'Usage : Ruchers du Midi</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Avec 180 ruches réparties sur 3 sites, BeeWise nous a permis de réduire nos coûts de maintenance de 35% grâce à la maintenance prédictive. Les rapports automatisés nous font gagner 15 heures par semaine."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Jean-Pierre Martin" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div>
+                                <p class="font-semibold text-text-primary">Jean-Pierre Martin</p>
+                                <p class="text-sm text-text-secondary">Directeur, Ruchers du Midi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-lg p-6 shadow-card">
+                            <p class="text-3xl font-bold text-primary mb-2">35%</p>
+                            <p class="text-sm text-text-secondary">Réduction des coûts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbyist Beekeepers Section -->
+    <section id="hobbyist" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Educational Dashboard -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-card-strong p-6">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-text-primary mb-4">Interface Éducative</h3>
+                            <div class="bg-secondary-50 rounded-lg p-4 mb-4">
+                                <div class="flex items-center mb-3">
+                                    <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                                    </svg>
+                                    <span class="font-semibold text-secondary">Conseil du Jour</span>
+                                </div>
+                                <p class="text-sm text-text-secondary">
+                                    La température de 35°C dans votre ruche #1 est idéale pour la production de miel. C'est le moment parfait pour vérifier l'espace de stockage !
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Learning Progress -->
+                        <div class="bg-white rounded-lg border-2 border-secondary-100 p-4">
+                            <h4 class="font-semibold text-text-primary mb-3">Progression d'Apprentissage</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Surveillance de Base</span>
+                                        <span class="text-success">Complété</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-success h-2 rounded-full w-full"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Gestion des Alertes</span>
+                                        <span class="text-secondary">75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-secondary h-2 rounded-full w-3/4"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Analyse Saisonnière</span>
+                                        <span class="text-warning">45%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-warning h-2 rounded-full w-2/5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Content -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                            Apiculteurs Passionnés
+                        </h2>
+                    </div>
+                    
+                    <p class="text-xl text-text-secondary mb-8">
+                        Apprentissage guidé et communauté bienveillante pour les passionnés gérant 1-10 ruches avec des outils éducatifs et un accompagnement personnalisé.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Assistant d'Installation</h3>
+                                <p class="text-text-secondary">Guide pas-à-pas pour configurer vos capteurs avec tutoriels vidéo et support technique dédié.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Communauté d'Entraide</h3>
+                                <p class="text-text-secondary">Accès à une communauté active d'apiculteurs expérimentés pour partager conseils et expériences.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Alertes Éducatives</h3>
+                                <p class="text-text-secondary">Notifications contextuelles avec explications détaillées et recommandations d'actions à entreprendre.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="dashboard_demo.html" class="bg-secondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-secondary-600 transition-smooth text-center">
+                            Essai Gratuit
+                        </a>
+                        <a href="knowledge_center.html" class="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-smooth text-center">
+                            Centre d'Apprentissage
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study -->
+            <div class="mt-16 bg-secondary-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-text-primary mb-4">Témoignage : Sophie Dubois</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Débutante en apiculture, BeeWise m'a accompagnée dans mes premiers pas. Les alertes éducatives m'ont évité plusieurs erreurs coûteuses et la communauté m'a donné confiance pour développer mon rucher."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1c2?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sophie Dubois" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/06/26/02/47/person-2442565_1280.jpg'; this.onerror=null;" />
+                            <div>
+                                <p class="font-semibold text-text-primary">Sophie Dubois</p>
+                                <p class="text-sm text-text-secondary">Apicultrice Passionnée - 3 ruches</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-lg p-6 shadow-card">
+                            <p class="text-3xl font-bold text-secondary mb-2">0</p>
+                            <p class="text-sm text-text-secondary">Pertes de ruches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agricultural Consultants Section -->
+    <section id="consultant" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Content -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45.5a2.5 2.5 0 11-3.9 0 .5.5 0 00-.1.5V16a1 1 0 001 1h4a1 1 0 001-1v-2a.5.5 0 00-.1-.5z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                            Consultants Agricoles
+                        </h2>
+                    </div>
+                    
+                    <p class="text-xl text-text-secondary mb-8">
+                        Outils professionnels pour gérer plusieurs exploitations clientes avec analyses comparatives, rapports personnalisés et recommandations basées sur les données.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Gestion Multi-Clients</h3>
+                                <p class="text-text-secondary">Interface centralisée pour surveiller et comparer les performances de toutes vos exploitations clientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Rapports Personnalisés</h3>
+                                <p class="text-text-secondary">Génération automatique de rapports avec votre branding pour présenter les résultats à vos clients.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Analyses Comparatives</h3>
+                                <p class="text-text-secondary">Outils d'analyse avancés pour identifier les meilleures pratiques et optimiser les performances.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="dashboard_demo.html" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent-600 transition-smooth text-center">
+                            Démo Consultant
+                        </a>
+                        <a href="pricing.html" class="border-2 border-accent text-accent px-8 py-4 rounded-lg font-semibold hover:bg-accent hover:text-white transition-smooth text-center">
+                            Tarifs Professionnels
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Multi-Client Dashboard -->
+                <div class="relative">
+                    <div class="bg-surface rounded-2xl shadow-card-strong p-6">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-text-primary mb-4">Tableau Multi-Clients</h3>
+                            <div class="space-y-3">
+                                <div class="bg-white rounded-lg p-4 shadow-card">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="font-medium text-text-primary">Ferme Dubois</span>
+                                        <span class="bg-success-100 text-success px-2 py-1 rounded text-sm">Excellent</span>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Ruches:</span>
+                                            <p class="font-semibold">24</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Santé:</span>
+                                            <p class="font-semibold text-success">96%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Production:</span>
+                                            <p class="font-semibold text-primary">+18%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-4 shadow-card">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="font-medium text-text-primary">Ruchers Martin</span>
+                                        <span class="bg-warning-100 text-warning px-2 py-1 rounded text-sm">Attention</span>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Ruches:</span>
+                                            <p class="font-semibold">67</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Santé:</span>
+                                            <p class="font-semibold text-warning">78%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Production:</span>
+                                            <p class="font-semibold text-accent">-5%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-4 shadow-card">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="font-medium text-text-primary">Apiculture Provence</span>
+                                        <span class="bg-success-100 text-success px-2 py-1 rounded text-sm">Bon</span>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2 text-sm">
+                                        <div>
+                                            <span class="text-text-secondary">Ruches:</span>
+                                            <p class="font-semibold">156</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Santé:</span>
+                                            <p class="font-semibold text-success">89%</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-text-secondary">Production:</span>
+                                            <p class="font-semibold text-primary">+12%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study -->
+            <div class="mt-16 bg-accent-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-text-primary mb-4">Succès : AgriConseil Provence</h3>
+                        <p class="text-text-secondary mb-4">
+                            "BeeWise nous permet de suivre 15 exploitations clientes simultanément. Les rapports automatisés nous font gagner 20 heures par semaine et nos recommandations sont maintenant basées sur des données précises."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Marc Rousseau" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div>
+                                <p class="font-semibold text-text-primary">Marc Rousseau</p>
+                                <p class="text-sm text-text-secondary">Consultant Senior, AgriConseil Provence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-lg p-6 shadow-card">
+                            <p class="text-3xl font-bold text-accent mb-2">15</p>
+                            <p class="text-sm text-text-secondary">Clients gérés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Institutions Section -->
+    <section id="research" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Research Dashboard -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-card-strong p-6">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-text-primary mb-4">Interface de Recherche</h3>
+                            <div class="bg-success-50 rounded-lg p-4 mb-4">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-semibold text-success">Étude Longitudinale</span>
+                                    <span class="bg-success text-white px-2 py-1 rounded text-xs">Actif</span>
+                                </div>
+                                <p class="text-sm text-text-secondary mb-3">
+                                    Analyse comportementale des colonies sur 24 mois - 847 ruches suivies
+                                </p>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-text-secondary">Points de données:</span>
+                                        <p class="font-semibold text-success">2.4M</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-text-secondary">Dernière collecte:</span>
+                                        <p class="font-semibold">Il y a 2 min</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Export Tools -->
+                        <div class="bg-white rounded-lg border-2 border-success-100 p-4">
+                            <h4 class="font-semibold text-text-primary mb-3">Outils d'Export</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="bg-success-100 text-success px-3 py-2 rounded text-sm font-medium hover:bg-success-200 transition-smooth">
+                                    Export CSV
+                                </button>
+                                <button class="bg-success-100 text-success px-3 py-2 rounded text-sm font-medium hover:bg-success-200 transition-smooth">
+                                    API JSON
+                                </button>
+                                <button class="bg-success-100 text-success px-3 py-2 rounded text-sm font-medium hover:bg-success-200 transition-smooth">
+                                    Données Brutes
+                                </button>
+                                <button class="bg-success-100 text-success px-3 py-2 rounded text-sm font-medium hover:bg-success-200 transition-smooth">
+                                    Statistiques
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Content -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                            Instituts de Recherche
+                        </h2>
+                    </div>
+                    
+                    <p class="text-xl text-text-secondary mb-8">
+                        Accès privilégié aux données brutes, outils d'analyse statistique avancés et documentation complète pour vos publications scientifiques.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-success rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Accès Données Brutes</h3>
+                                <p class="text-text-secondary">Export complet des données de capteurs avec métadonnées détaillées et horodatage précis.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-success rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Outils Statistiques</h3>
+                                <p class="text-text-secondary">Suite complète d'outils d'analyse statistique intégrés avec export vers R, Python et SPSS.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-success rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Documentation Académique</h3>
+                                <p class="text-text-secondary">Méthodologie détaillée, calibration des capteurs et protocoles de validation pour vos publications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="dashboard_demo.html" class="bg-success text-white px-8 py-4 rounded-lg font-semibold hover:bg-success-600 transition-smooth text-center">
+                            Accès Recherche
+                        </a>
+                        <a href="javascript:void(0)" class="border-2 border-success text-success px-8 py-4 rounded-lg font-semibold hover:bg-success hover:text-white transition-smooth text-center">
+                            Documentation API
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study -->
+            <div class="mt-16 bg-success-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-text-primary mb-4">Partenariat : INRAE Avignon</h3>
+                        <p class="text-text-secondary mb-4">
+                            "BeeWise nous fournit des données de qualité exceptionnelle pour nos recherches sur l'impact du changement climatique. L'accès aux données brutes nous a permis de publier 3 articles dans des revues à comité de lecture."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Catherine Moreau" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                            <div>
+                                <p class="font-semibold text-text-primary">Dr. Catherine Moreau</p>
+                                <p class="text-sm text-text-secondary">Directrice de Recherche, INRAE Avignon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-lg p-6 shadow-card">
+                            <p class="text-3xl font-bold text-success mb-2">3</p>
+                            <p class="text-sm text-text-secondary">Publications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+                    Comparaison des Solutions
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Trouvez la solution BeeWise qui correspond parfaitement à vos besoins
+                </p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-2xl shadow-card-strong overflow-hidden">
+                    <thead class="bg-surface">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-semibold text-text-primary">Fonctionnalités</th>
+                            <th class="px-6 py-4 text-center font-semibold text-primary">Commercial</th>
+                            <th class="px-6 py-4 text-center font-semibold text-secondary">Passionné</th>
+                            <th class="px-6 py-4 text-center font-semibold text-accent">Consultant</th>
+                            <th class="px-6 py-4 text-center font-semibold text-success">Recherche</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-text-primary">Nombre de ruches</td>
+                            <td class="px-6 py-4 text-center text-primary">50+</td>
+                            <td class="px-6 py-4 text-center text-secondary">1-10</td>
+                            <td class="px-6 py-4 text-center text-accent">Illimité</td>
+                            <td class="px-6 py-4 text-center text-success">Illimité</td>
+                        </tr>
+                        <tr class="bg-surface">
+                            <td class="px-6 py-4 font-medium text-text-primary">Surveillance temps réel</td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-primary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-secondary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-success mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-text-primary">Rapports automatisés</td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-primary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">Basique</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-success mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr class="bg-surface">
+                            <td class="px-6 py-4 font-medium text-text-primary">Support communauté</td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">Limité</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-secondary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">Professionnel</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">Académique</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-text-primary">Accès données brutes</td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">Export CSV</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">-</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-text-secondary">API</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <svg class="w-5 h-5 text-success mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                Trouvez Votre Solution Idéale
+            </h2>
+            <p class="text-xl opacity-90 mb-8">
+                Chaque apiculteur est unique. Découvrez comment BeeWise s'adapte à vos besoins spécifiques.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="dashboard_demo.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-smooth">
+                    Essayer Maintenant
+                </a>
+                <a href="pricing.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Voir les Tarifs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                        </svg>
+                        <span class="text-xl font-bold">BeeWise</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Surveillance intelligente des ruches pour une apiculture moderne et durable.
+                    </p>
+                </div>
+                
+                <!-- Product Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="product_features.html" class="hover:text-primary transition-smooth">Fonctionnalités</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-smooth">Tarifs</a></li>
+                        <li><a href="dashboard_demo.html" class="hover:text-primary transition-smooth">Démo</a></li>
+                        <li><a href="solutions_by_user_type.html" class="hover:text-primary transition-smooth">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="knowledge_center.html" class="hover:text-primary transition-smooth">Centre de Connaissances</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Documentation API</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Guides</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>support@beewise.fr</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 BeeWise. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        
+        // Add smooth scrolling for all anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    scrollToSection(targetId);
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

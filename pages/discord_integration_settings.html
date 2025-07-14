@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuration Discord - BeeWise Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbeewiseda6480back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">BeeWise</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Accueil</a>
+                    <a href="dashboard_demo.html" class="text-text-secondary hover:text-primary transition-smooth">Tableau de Bord</a>
+                    <a href="discord_command_center.html" class="text-text-secondary hover:text-primary transition-smooth">Centre de Commande</a>
+                    <a href="discord_integration_settings.html" class="text-primary font-medium">Configuration Discord</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-50 to-secondary-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="h-12 w-12 text-primary mr-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.946 2.4189-2.1569 2.4189Z"/>
+                    </svg>
+                    <h1 class="text-4xl font-bold text-text-primary">Configuration Discord</h1>
+                </div>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Connectez votre bot Discord à BeeWise pour recevoir des alertes en temps réel et gérer vos ruches directement depuis votre serveur Discord.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Connection Status Panel -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-card p-6 sticky top-24">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-10 h-10 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary mb-2">Statut de Connexion</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-warning-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-warning rounded-full mr-3"></div>
+                                    <span class="text-sm font-medium text-text-primary">Bot Discord</span>
+                                </div>
+                                <span class="text-sm text-warning font-medium">Déconnecté</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-error-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-error rounded-full mr-3"></div>
+                                    <span class="text-sm font-medium text-text-primary">Permissions</span>
+                                </div>
+                                <span class="text-sm text-error font-medium">Non configurées</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-error-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-error rounded-full mr-3"></div>
+                                    <span class="text-sm font-medium text-text-primary">Channels</span>
+                                </div>
+                                <span class="text-sm text-error font-medium">0 configurés</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-surface rounded-lg">
+                            <h4 class="font-semibold text-text-primary mb-2">Serveur Actuel</h4>
+                            <p class="text-sm text-text-secondary">Aucun serveur configuré</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Configuration Forms -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Bot Token Configuration -->
+                    <div class="bg-white rounded-xl shadow-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Authentification Bot</h2>
+                                <p class="text-text-secondary">Configurez votre token Discord Bot pour connecter BeeWise</p>
+                            </div>
+                        </div>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Token Discord Bot</label>
+                                <div class="relative">
+                                    <input type="password" id="bot-token" placeholder="Votre token Discord Bot" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" />
+                                    <button type="button" onclick="toggleTokenVisibility()" class="absolute right-3 top-3 text-text-secondary hover:text-text-primary">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="text-sm text-text-secondary mt-2">Vous pouvez obtenir ce token depuis le Discord Developer Portal</p>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Nom du Bot</label>
+                                <input type="text" placeholder="BeeWise Monitor" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" />
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <button type="button" onclick="testConnection()" class="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary-700 transition-smooth">
+                                    Tester la Connexion
+                                </button>
+                                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-smooth">
+                                    Sauvegarder
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Server Selection -->
+                    <div class="bg-white rounded-xl shadow-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Sélection du Serveur</h2>
+                                <p class="text-text-secondary">Choisissez le serveur Discord où installer BeeWise</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border border-gray-300 rounded-lg p-4 hover:border-primary transition-smooth cursor-pointer">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold">AP</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary">Apiculteurs Passionnés</h4>
+                                            <p class="text-sm text-text-secondary">2,847 membres • Vous êtes Admin</p>
+                                        </div>
+                                    </div>
+                                    <input type="radio" name="server" value="server1" class="text-primary" />
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-300 rounded-lg p-4 hover:border-primary transition-smooth cursor-pointer">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold">RU</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary">Ruches Urbaines</h4>
+                                            <p class="text-sm text-text-secondary">156 membres • Vous êtes Admin</p>
+                                        </div>
+                                    </div>
+                                    <input type="radio" name="server" value="server2" class="text-primary" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-primary-50 rounded-lg">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mr-3 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 14h-2v-4h2v4zm0-6h-2V6h2v2zm-1-5A10 10 0 003 12a10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 1z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Permissions Requises</h4>
+                                    <p class="text-sm text-text-secondary">Le bot nécessite les permissions : Envoyer des messages, Gérer les messages, Ajouter des réactions, Utiliser les commandes slash</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Channel Configuration -->
+                    <div class="bg-white rounded-xl shadow-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Configuration des Channels</h2>
+                                <p class="text-text-secondary">Assignez des channels Discord pour différents types d'alertes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Alertes d'Urgence</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth">
+                                    <option>Sélectionner un channel</option>
+                                    <option>#alertes-urgence</option>
+                                    <option>#monitoring-critique</option>
+                                    <option>#notifications</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Notifications Routine</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth">
+                                    <option>Sélectionner un channel</option>
+                                    <option>#notifications-routine</option>
+                                    <option>#monitoring-general</option>
+                                    <option>#updates-quotidiens</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Communauté & Support</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth">
+                                    <option>Sélectionner un channel</option>
+                                    <option>#support-beewise</option>
+                                    <option>#aide-apiculteurs</option>
+                                    <option>#discussions</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Rapports & Analytics</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth">
+                                    <option>Sélectionner un channel</option>
+                                    <option>#rapports-quotidiens</option>
+                                    <option>#analytics-ruches</option>
+                                    <option>#statistiques</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Command Configuration -->
+                    <div class="bg-white rounded-xl shadow-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Configuration des Commandes</h2>
+                                <p class="text-text-secondary">Personnalisez les réponses du bot pour chaque commande</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="border border-gray-300 rounded-lg p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center">
+                                        <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-sm font-medium mr-3">!aide</span>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary">Commande d'Aide</h4>
+                                            <p class="text-sm text-text-secondary">Affiche la liste des commandes disponibles</p>
+                                        </div>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer" />
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </label>
+                                </div>
+                                <textarea placeholder="Message de réponse personnalisé..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" rows="3">🐝 **BeeWise - Commandes Disponibles** 🐝
+
+!resume_live - Résumé en temps réel de toutes vos ruches
+!status - Statut détaillé d'une ruche spécifique
+!alertes - Alertes actives et historique
+!activite - Graphique d'activité des abeilles
+!graph_global - Vue d'ensemble de toutes les ruches
+
+Besoin d'aide ? Contactez notre support !</textarea>
+                            </div>
+                            
+                            <div class="border border-gray-300 rounded-lg p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center">
+                                        <span class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-sm font-medium mr-3">!resume_live</span>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary">Résumé en Temps Réel</h4>
+                                            <p class="text-sm text-text-secondary">Affiche un résumé de toutes les ruches</p>
+                                        </div>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer" />
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </label>
+                                </div>
+                                <textarea placeholder="Template de réponse..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" rows="3">📊 **Résumé Live - {{timestamp}}** 📊
+
+🟢 **Ruches Actives**: {{active_hives}}/{{total_hives}}
+🌡️ **Température Moyenne**: {{avg_temp}}°C
+💧 **Humidité Moyenne**: {{avg_humidity}}%
+⚠️ **Alertes Actives**: {{active_alerts}}
+
+Tout semble optimal ! 🎉</textarea>
+                            </div>
+                            
+                            <div class="border border-gray-300 rounded-lg p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center">
+                                        <span class="bg-accent-100 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">!alertes</span>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary">Alertes Actives</h4>
+                                            <p class="text-sm text-text-secondary">Liste des alertes et notifications</p>
+                                        </div>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer" />
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </label>
+                                </div>
+                                <textarea placeholder="Format des alertes..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" rows="3">🚨 **Alertes BeeWise** 🚨
+
+{{#if critical_alerts}}
+🔴 **Critiques**: {{critical_alerts}}
+{{/if}}
+{{#if warning_alerts}}
+🟡 **Attention**: {{warning_alerts}}
+{{/if}}
+{{#if no_alerts}}
+✅ **Aucune alerte active** - Tout va bien !
+{{/if}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testing Tools -->
+                    <div class="bg-white rounded-xl shadow-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Outils de Test</h2>
+                                <p class="text-text-secondary">Testez votre configuration avant la mise en production</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Test des Commandes</h4>
+                                <div class="space-y-3">
+                                    <button class="w-full px-4 py-3 bg-primary-50 text-primary rounded-lg hover:bg-primary-100 transition-smooth text-left">
+                                        <span class="font-medium">Tester !aide</span>
+                                    </button>
+                                    <button class="w-full px-4 py-3 bg-secondary-50 text-secondary rounded-lg hover:bg-secondary-100 transition-smooth text-left">
+                                        <span class="font-medium">Tester !resume_live</span>
+                                    </button>
+                                    <button class="w-full px-4 py-3 bg-accent-50 text-accent rounded-lg hover:bg-accent-100 transition-smooth text-left">
+                                        <span class="font-medium">Tester !alertes</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Test des Notifications</h4>
+                                <div class="space-y-3">
+                                    <button class="w-full px-4 py-3 bg-success-50 text-success rounded-lg hover:bg-success-100 transition-smooth text-left">
+                                        <span class="font-medium">Alerte Test - Normale</span>
+                                    </button>
+                                    <button class="w-full px-4 py-3 bg-warning-50 text-warning rounded-lg hover:bg-warning-100 transition-smooth text-left">
+                                        <span class="font-medium">Alerte Test - Attention</span>
+                                    </button>
+                                    <button class="w-full px-4 py-3 bg-error-50 text-error rounded-lg hover:bg-error-100 transition-smooth text-left">
+                                        <span class="font-medium">Alerte Test - Critique</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Save Configuration -->
+                    <div class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-4">Configuration Terminée ?</h3>
+                        <p class="text-white/90 mb-6">Sauvegardez votre configuration Discord pour activer l'intégration</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-smooth">
+                                Sauvegarder & Activer
+                            </button>
+                            <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                                Prévisualiser
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold">BeeWise</span>
+                </div>
+                <p class="text-gray-300">&copy; 2025 BeeWise. Surveillance intelligente des ruches.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTokenVisibility() {
+            const tokenInput = document.getElementById('bot-token');
+            const type = tokenInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            tokenInput.setAttribute('type', type);
+        }
+        
+        function testConnection() {
+            // Simulate connection test
+            const statusElements = document.querySelectorAll('.bg-warning-50, .bg-error-50');
+            statusElements.forEach(el => {
+                el.classList.remove('bg-warning-50', 'bg-error-50');
+                el.classList.add('bg-success-50');
+                const indicator = el.querySelector('.bg-warning, .bg-error');
+                indicator.classList.remove('bg-warning', 'bg-error');
+                indicator.classList.add('bg-success');
+                const statusText = el.querySelector('span:last-child');
+                statusText.textContent = 'Connecté';
+                statusText.classList.remove('text-warning', 'text-error');
+                statusText.classList.add('text-success');
+            });
+        }
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #F4A261; /* orange-300 - Productive honey warmth */
+  --color-primary-50: #FEF7ED; /* orange-50 */
+  --color-primary-100: #FED7AA; /* orange-100 */
+  --color-primary-200: #FEB273; /* orange-200 */
+  --color-primary-300: #F4A261; /* orange-300 */
+  --color-primary-400: #F59E0B; /* orange-400 */
+  --color-primary-500: #D97706; /* orange-500 */
+  --color-primary-600: #B45309; /* orange-600 */
+  --color-primary-700: #92400E; /* orange-700 */
+  --color-primary-800: #78350F; /* orange-800 */
+  --color-primary-900: #451A03; /* orange-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #2A9D8F; /* teal-600 - Monitoring confidence */
+  --color-secondary-50: #F0FDFA; /* teal-50 */
+  --color-secondary-100: #CCFBF1; /* teal-100 */
+  --color-secondary-200: #99F6E4; /* teal-200 */
+  --color-secondary-300: #5EEAD4; /* teal-300 */
+  --color-secondary-400: #2DD4BF; /* teal-400 */
+  --color-secondary-500: #14B8A6; /* teal-500 */
+  --color-secondary-600: #2A9D8F; /* teal-600 */
+  --color-secondary-700: #0F766E; /* teal-700 */
+  --color-secondary-800: #115E59; /* teal-800 */
+  --color-secondary-900: #134E4A; /* teal-900 */
+
+  /* Accent Colors */
+  --color-accent: #E76F51; /* red-500 - Critical alerts */
+  --color-accent-50: #FEF2F2; /* red-50 */
+  --color-accent-100: #FEE2E2; /* red-100 */
+  --color-accent-200: #FECACA; /* red-200 */
+  --color-accent-300: #FCA5A5; /* red-300 */
+  --color-accent-400: #F87171; /* red-400 */
+  --color-accent-500: #E76F51; /* red-500 */
+  --color-accent-600: #DC2626; /* red-600 */
+  --color-accent-700: #B91C1C; /* red-700 */
+  --color-accent-800: #991B1B; /* red-800 */
+  --color-accent-900: #7F1D1D; /* red-900 */
+
+  /* Background Colors */
+  --color-background: #FEFEFE; /* gray-50 - Clean data canvas */
+  --color-surface: #F8F9FA; /* gray-100 - Subtle card depth */
+
+  /* Text Colors */
+  --color-text-primary: #264653; /* slate-800 - Extended dashboard reading */
+  --color-text-secondary: #6C757D; /* gray-500 - Supporting information */
+
+  /* Status Colors */
+  --color-success: #52C41A; /* green-500 - Positive confirmations */
+  --color-success-50: #F0F9FF; /* green-50 */
+  --color-success-100: #DCFCE7; /* green-100 */
+  --color-success-500: #52C41A; /* green-500 */
+  --color-success-600: #16A34A; /* green-600 */
+
+  --color-warning: #FAAD14; /* yellow-500 - Attention needed */
+  --color-warning-50: #FEFCE8; /* yellow-50 */
+  --color-warning-100: #FEF3C7; /* yellow-100 */
+  --color-warning-500: #FAAD14; /* yellow-500 */
+  --color-warning-600: #D97706; /* yellow-600 */
+
+  --color-error: #FF4D4F; /* red-500 - System issues */
+  --color-error-50: #FEF2F2; /* red-50 */
+  --color-error-100: #FEE2E2; /* red-100 */
+  --color-error-500: #FF4D4F; /* red-500 */
+  --color-error-600: #DC2626; /* red-600 */
+
+  /* Border Colors */
+  --color-border: #E5E7EB; /* gray-200 */
+  --color-border-active: #F4A261; /* orange-300 */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-shadow-strong {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .transition-smooth {
+    transition: all 300ms ease-in-out;
+  }
+
+  .transition-micro {
+    transition: all 200ms ease-in-out;
+  }
+
+  .transition-data {
+    transition: opacity 400ms ease-in-out;
+  }
+
+  .pulse-gentle {
+    animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-gentle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonctionnalités Produit - BeeWise Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbeewiseda6480back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">BeeWise</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Accueil</a>
+                    <a href="product_features.html" class="text-primary font-medium">Fonctionnalités</a>
+                    <a href="solutions_by_user_type.html" class="text-text-secondary hover:text-primary transition-smooth">Solutions</a>
+                    <a href="pricing.html" class="text-text-secondary hover:text-primary transition-smooth">Tarifs</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-smooth">Centre de Connaissances</a>
+                    <a href="dashboard_demo.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-smooth">Démo</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+                    Fonctionnalités <span class="text-primary">Intelligentes</span>
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Découvrez comment BeeWise transforme vos données de capteurs en insights exploitables grâce à des outils de surveillance avancés et une interface intuitive.
+                </p>
+            </div>
+            
+            <!-- Feature Stats -->
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-6 shadow-card text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                    <p class="text-text-secondary">Surveillance Continue</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-card text-center">
+                    <div class="text-3xl font-bold text-secondary mb-2">< 30s</div>
+                    <p class="text-text-secondary">Temps de Réponse</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-card text-center">
+                    <div class="text-3xl font-bold text-success mb-2">99.9%</div>
+                    <p class="text-text-secondary">Disponibilité</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-card text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">15+</div>
+                    <p class="text-text-secondary">Capteurs Compatibles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Feature Tabs -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+                    Explorez Nos Capacités
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Interface interactive pour découvrir chaque fonctionnalité en détail
+                </p>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center mb-12 border-b border-border">
+                <button class="tab-button active px-6 py-3 font-semibold text-primary border-b-2 border-primary" data-tab="dashboard">
+                    Tableau de Bord Live
+                </button>
+                <button class="tab-button px-6 py-3 font-semibold text-text-secondary hover:text-primary transition-smooth" data-tab="analytics">
+                    Studio d'Analyses
+                </button>
+                <button class="tab-button px-6 py-3 font-semibold text-text-secondary hover:text-primary transition-smooth" data-tab="alerts">
+                    Gestion d'Alertes
+                </button>
+                <button class="tab-button px-6 py-3 font-semibold text-text-secondary hover:text-primary transition-smooth" data-tab="api">
+                    Console API
+                </button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="tab-content-container">
+                <!-- Live Dashboard Tab -->
+                <div id="dashboard-tab" class="tab-content active">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-6">Surveillance Temps Réel</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Widgets Personnalisables</h4>
+                                        <p class="text-text-secondary">Organisez votre tableau de bord selon vos besoins avec des widgets glisser-déposer pour température, humidité, et activité des abeilles.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Graphiques Interactifs</h4>
+                                        <p class="text-text-secondary">Visualisez les tendances avec des graphiques en temps réel, zoom temporel, et comparaisons multi-ruches pour une analyse approfondie.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Score de Santé</h4>
+                                        <p class="text-text-secondary">Algorithme propriétaire qui évalue la santé globale de chaque ruche basé sur 12 paramètres critiques avec recommandations d'actions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dashboard Preview -->
+                        <div class="bg-surface rounded-2xl p-6 shadow-card-strong">
+                            <div class="bg-white rounded-xl p-4 mb-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="font-semibold text-text-primary">Ruche #001 - Surveillance Live</h4>
+                                    <div class="flex items-center">
+                                        <div class="w-2 h-2 bg-success rounded-full animate-pulse mr-2"></div>
+                                        <span class="text-sm text-success font-medium">En ligne</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Temperature Chart Simulation -->
+                                <div class="h-32 bg-gradient-to-r from-primary-50 to-primary-100 rounded-lg mb-4 relative overflow-hidden">
+                                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 100">
+                                        <polyline fill="none" stroke="#F4A261" stroke-width="2" points="0,60 50,45 100,50 150,35 200,40 250,30 300,35"/>
+                                        <circle cx="300" cy="35" r="3" fill="#F4A261"/>
+                                    </svg>
+                                    <div class="absolute top-2 left-2 text-xs text-text-secondary">Température (°C)</div>
+                                    <div class="absolute bottom-2 right-2 text-sm font-semibold text-primary">35.2°C</div>
+                                </div>
+                                
+                                <!-- Status Indicators -->
+                                <div class="grid grid-cols-3 gap-4 text-sm">
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-secondary">65%</div>
+                                        <div class="text-text-secondary">Humidité</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-success">Élevée</div>
+                                        <div class="text-text-secondary">Activité</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-primary">92%</div>
+                                        <div class="text-text-secondary">Santé</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Alert Stream -->
+                            <div class="space-y-2">
+                                <div class="bg-success-50 border-l-4 border-success p-3 rounded text-sm">
+                                    <span class="font-medium">Température normalisée</span> - Il y a 5 min
+                                </div>
+                                <div class="bg-warning-50 border-l-4 border-warning p-3 rounded text-sm">
+                                    <span class="font-medium">Humidité élevée détectée</span> - Il y a 12 min
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Analytics Studio Tab -->
+                <div id="analytics-tab" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-6">Studio d'Analyses Prédictives</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Modélisation Saisonnière</h4>
+                                        <p class="text-text-secondary">Prédictions basées sur l'IA pour anticiper les cycles de production, les périodes critiques et optimiser les interventions.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Comparaisons Multi-Ruches</h4>
+                                        <p class="text-text-secondary">Analysez les performances relatives, identifiez les meilleures pratiques et reproduisez les succès à travers votre exploitation.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Rapports Automatisés</h4>
+                                        <p class="text-text-secondary">Génération automatique de rapports hebdomadaires et mensuels avec insights personnalisés et recommandations d'actions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analytics Preview -->
+                        <div class="bg-surface rounded-2xl p-6 shadow-card-strong">
+                            <div class="bg-white rounded-xl p-4 mb-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Prévisions Saisonnières</h4>
+                                
+                                <!-- Seasonal Chart -->
+                                <div class="h-40 bg-gradient-to-br from-secondary-50 to-primary-50 rounded-lg mb-4 relative">
+                                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 120">
+                                        <!-- Historical data -->
+                                        <polyline fill="none" stroke="#2A9D8F" stroke-width="2" stroke-dasharray="5,5" points="0,80 60,70 120,60 180,50"/>
+                                        <!-- Predicted data -->
+                                        <polyline fill="none" stroke="#F4A261" stroke-width="3" points="180,50 240,45 300,40"/>
+                                        <circle cx="180" cy="50" r="4" fill="#2A9D8F"/>
+                                        <circle cx="300" cy="40" r="4" fill="#F4A261"/>
+                                    </svg>
+                                    <div class="absolute top-2 left-2 text-xs text-text-secondary">Production Miel (kg)</div>
+                                    <div class="absolute top-2 right-2 flex items-center space-x-4 text-xs">
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-0.5 bg-secondary mr-1"></div>
+                                            <span>Historique</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-0.5 bg-primary mr-1"></div>
+                                            <span>Prédiction</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Insights -->
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex items-center justify-between p-2 bg-success-50 rounded">
+                                        <span>Pic de production prévu</span>
+                                        <span class="font-semibold text-success">Juillet 2025</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2 bg-warning-50 rounded">
+                                        <span>Période critique</span>
+                                        <span class="font-semibold text-warning">Septembre 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Performance Comparison -->
+                            <div class="bg-white rounded-xl p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Comparaison Performance</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm text-text-secondary">Ruche #001</span>
+                                        <div class="flex items-center">
+                                            <div class="w-20 h-2 bg-gray-200 rounded-full mr-2">
+                                                <div class="w-18 h-2 bg-success rounded-full"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold">92%</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm text-text-secondary">Ruche #002</span>
+                                        <div class="flex items-center">
+                                            <div class="w-20 h-2 bg-gray-200 rounded-full mr-2">
+                                                <div class="w-16 h-2 bg-primary rounded-full"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold">87%</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm text-text-secondary">Ruche #003</span>
+                                        <div class="flex items-center">
+                                            <div class="w-20 h-2 bg-gray-200 rounded-full mr-2">
+                                                <div class="w-14 h-2 bg-warning rounded-full"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold">78%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alert Management Tab -->
+                <div id="alerts-tab" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-6">Système d'Alertes Intelligent</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Seuils Personnalisables</h4>
+                                        <p class="text-text-secondary">Définissez des seuils critiques adaptés à vos ruches avec des alertes graduées : information, attention, critique, urgence.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Multi-Canal</h4>
+                                        <p class="text-text-secondary">Notifications via Discord, SMS, email avec escalade automatique selon la gravité. Intégration Slack et Teams disponible.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Workflows d'Urgence</h4>
+                                        <p class="text-text-secondary">Procédures automatisées avec contacts d'urgence, instructions d'intervention et suivi des actions correctives.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert Management Preview -->
+                        <div class="bg-surface rounded-2xl p-6 shadow-card-strong">
+                            <div class="bg-white rounded-xl p-4 mb-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Centre de Contrôle Alertes</h4>
+                                
+                                <!-- Alert Configuration -->
+                                <div class="space-y-4 mb-6">
+                                    <div class="flex items-center justify-between p-3 border border-border rounded-lg">
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                                            <span class="text-sm font-medium">Température > 38°C</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Critique</span>
+                                            <button class="text-text-secondary hover:text-primary">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center justify-between p-3 border border-border rounded-lg">
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-3 bg-warning rounded-full mr-3"></div>
+                                            <span class="text-sm font-medium">Humidité < 40%</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Attention</span>
+                                            <button class="text-text-secondary hover:text-primary">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Notification Channels -->
+                                <div class="border-t border-border pt-4">
+                                    <h5 class="font-medium text-text-primary mb-3">Canaux de Notification</h5>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div class="flex items-center justify-center p-2 bg-primary-50 rounded text-xs">
+                                            <svg class="w-4 h-4 text-primary mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                            </svg>
+                                            Email
+                                        </div>
+                                        <div class="flex items-center justify-center p-2 bg-secondary-50 rounded text-xs">
+                                            <svg class="w-4 h-4 text-secondary mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                            </svg>
+                                            SMS
+                                        </div>
+                                        <div class="flex items-center justify-center p-2 bg-accent-50 rounded text-xs">
+                                            <svg class="w-4 h-4 text-accent mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"/>
+                                            </svg>
+                                            Discord
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Recent Alerts -->
+                            <div class="bg-white rounded-xl p-4">
+                                <h4 class="font-semibold text-text-primary mb-4">Alertes Récentes</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between p-2 bg-success-50 border-l-4 border-success rounded">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                            </svg>
+                                            <span class="text-sm">Température normalisée</span>
+                                        </div>
+                                        <span class="text-xs text-text-secondary">5 min</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2 bg-warning-50 border-l-4 border-warning rounded">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                                            </svg>
+                                            <span class="text-sm">Humidité élevée</span>
+                                        </div>
+                                        <span class="text-xs text-text-secondary">12 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- API Console Tab -->
+                <div id="api-tab" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-6">Console API Développeur</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">API RESTful FastAPI</h4>
+                                        <p class="text-text-secondary">Interface moderne avec documentation interactive Swagger, authentification JWT et endpoints optimisés pour les données temps réel.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">WebSocket Temps Réel</h4>
+                                        <p class="text-text-secondary">Connexions persistantes pour streaming de données live, notifications push et synchronisation instantanée multi-clients.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                        <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary mb-2">Export de Données</h4>
+                                        <p class="text-text-secondary">Formats multiples (JSON, CSV, PDF) avec filtrage avancé, agrégations personnalisées et planification automatique.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- API Console Preview -->
+                        <div class="bg-surface rounded-2xl p-6 shadow-card-strong">
+                            <div class="bg-text-primary rounded-xl p-4 font-mono text-sm">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-primary font-semibold">BeeWise API Console</span>
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                        <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                        <div class="w-3 h-3 bg-success rounded-full"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- API Request Example -->
+                                <div class="text-white mb-4">
+                                    <div class="text-secondary mb-2">GET /api/v1/hives/001/sensors/live</div>
+                                    <div class="text-gray-300 text-xs mb-2">Authorization: Bearer jwt_token_here</div>
+                                    <div class="bg-black/30 rounded p-3 text-xs">
+                                        <div class="text-success">200 OK</div>
+                                        <div class="text-gray-300 mt-2">
+                                            {<br />
+                                            &nbsp;&nbsp;"hive_id": "001",<br />
+                                            &nbsp;&nbsp;"timestamp": "2025-07-14T07:32:42Z",<br />
+                                            &nbsp;&nbsp;"temperature": 35.2,<br />
+                                            &nbsp;&nbsp;"humidity": 65.4,<br />
+                                            &nbsp;&nbsp;"activity_level": "high",<br />
+                                            &nbsp;&nbsp;"health_score": 92<br />
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- WebSocket Connection -->
+                                <div class="text-white">
+                                    <div class="text-secondary mb-2">WebSocket: /ws/hives/001/live</div>
+                                    <div class="bg-black/30 rounded p-3 text-xs">
+                                        <div class="text-primary">Connected</div>
+                                        <div class="text-gray-300 mt-1">
+                                            → Streaming live data...<br />
+                                            → Alert: Temperature spike detected
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- API Documentation Links -->
+                            <div class="bg-white rounded-xl p-4 mt-4">
+                                <h4 class="font-semibold text-text-primary mb-3">Documentation</h4>
+                                <div class="space-y-2">
+                                    <a href="javascript:void(0)" class="flex items-center justify-between p-2 hover:bg-surface rounded transition-smooth">
+                                        <span class="text-sm text-text-secondary">Guide de Démarrage Rapide</span>
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="flex items-center justify-between p-2 hover:bg-surface rounded transition-smooth">
+                                        <span class="text-sm text-text-secondary">Référence API Complète</span>
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="flex items-center justify-between p-2 hover:bg-surface rounded transition-smooth">
+                                        <span class="text-sm text-text-secondary">Exemples d'Intégration</span>
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+                    Spécifications Techniques
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Architecture robuste et performante pour une surveillance fiable 24/7
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Backend Architecture -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Backend FastAPI</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            API RESTful haute performance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Authentification JWT sécurisée
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Documentation Swagger automatique
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Validation automatique des données
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Database Optimization -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Base de Données SQLite</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Optimisée pour données temporelles
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Index composites performants
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Sauvegarde automatique
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Compression des données historiques
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Real-time Communication -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">WebSocket Temps Réel</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Connexions persistantes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Streaming de données live
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Reconnexion automatique
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Notifications push instantanées
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Capabilities -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+                    Intégrations & Compatibilité
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Connectez BeeWise à votre écosystème technologique existant
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Capteurs Compatibles</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-surface rounded-lg p-4 text-center">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Capteur température" class="w-16 h-16 mx-auto mb-3 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <h4 class="font-semibold text-text-primary text-sm">SensorTech Pro</h4>
+                            <p class="text-xs text-text-secondary">Température & Humidité</p>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4 text-center">
+                            <img src="https://images.pixabay.com/photo/2016/11/30/12/16/electronics-1873536_1280.jpg" alt="Capteur activité" class="w-16 h-16 mx-auto mb-3 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <h4 class="font-semibold text-text-primary text-sm">BeeMonitor X1</h4>
+                            <p class="text-xs text-text-secondary">Activité & Vibrations</p>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4 text-center">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Capteur poids" class="w-16 h-16 mx-auto mb-3 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/30/12/16/electronics-1873536_1280.jpg'; this.onerror=null;" />
+                            <h4 class="font-semibold text-text-primary text-sm">HiveScale 2.0</h4>
+                            <p class="text-xs text-text-secondary">Poids & Production</p>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4 text-center">
+                            <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Capteur audio" class="w-16 h-16 mx-auto mb-3 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <h4 class="font-semibold text-text-primary text-sm">AudioBee Pro</h4>
+                            <p class="text-xs text-text-secondary">Analyse Sonore</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Outils Tiers</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-surface rounded-lg">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Discord Bot</h4>
+                                <p class="text-sm text-text-secondary">Notifications communautaires et alertes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-surface rounded-lg">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Email & SMS</h4>
+                                <p class="text-sm text-text-secondary">Notifications multi-canaux</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-surface rounded-lg">
+                            <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Export de Données</h4>
+                                <p class="text-sm text-text-secondary">CSV, JSON, PDF pour analyse externe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases by User Type -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+                    Cas d'Usage par Profil
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Des solutions adaptées à chaque type d'apiculteur
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Commercial Beekeepers -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Apiculteurs Commerciaux</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Surveillance Multi-Sites</h4>
+                                <p class="text-sm text-text-secondary">Gestion centralisée de 50+ ruches réparties sur plusieurs emplacements</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">ROI Optimisé</h4>
+                                <p class="text-sm text-text-secondary">Réduction des pertes de 94% et augmentation de production de 23%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Rapports Automatisés</h4>
+                                <p class="text-sm text-text-secondary">Documentation complète pour assurances et certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hobbyist Beekeepers -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Apiculteurs Passionnés</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Apprentissage Guidé</h4>
+                                <p class="text-sm text-text-secondary">Alertes éducatives et conseils personnalisés pour débutants</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Communauté Active</h4>
+                                <p class="text-sm text-text-secondary">Partage d'expériences et entraide entre apiculteurs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Interface Simplifiée</h4>
+                                <p class="text-sm text-text-secondary">Tableau de bord intuitif adapté aux petites exploitations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Research Institutions -->
+                <div class="bg-white rounded-xl p-8 shadow-card">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Instituts de Recherche</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Données Brutes</h4>
+                                <p class="text-sm text-text-secondary">Accès complet aux données pour analyses statistiques avancées</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">API Complète</h4>
+                                <p class="text-sm text-text-secondary">Intégration avec outils de recherche et modèles prédictifs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Études Longitudinales</h4>
+                                <p class="text-sm text-text-secondary">Historique complet pour recherches comportementales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                Prêt à Découvrir BeeWise en Action ?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Testez toutes ces fonctionnalités gratuitement pendant 30 jours
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="dashboard_demo.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-smooth shadow-card">
+                    Essayer la Démo Interactive
+                </a>
+                <a href="pricing.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Voir les Tarifs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 11.66 11.34 14 14 14V22H10V14C6.69 14 4 11.31 4 8V6L10 0L14 4L18 0L22 6V8C22 11.31 19.31 14 16 14V22H12V14C14.66 14 17 11.66 17 9Z"/>
+                        </svg>
+                        <span class="text-xl font-bold">BeeWise</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Surveillance intelligente des ruches pour une apiculture moderne et durable.
+                    </p>
+                </div>
+                
+                <!-- Product Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="product_features.html" class="hover:text-primary transition-smooth">Fonctionnalités</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-smooth">Tarifs</a></li>
+                        <li><a href="dashboard_demo.html" class="hover:text-primary transition-smooth">Démo</a></li>
+                        <li><a href="solutions_by_user_type.html" class="hover:text-primary transition-smooth">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="knowledge_center.html" class="hover:text-primary transition-smooth">Centre de Connaissances</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Documentation API</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Guides</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-primary transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>support@beewise.fr</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 BeeWise. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tab Functionality -->
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-primary', 'border-primary');
+                        btn.classList.add('text-text-secondary');
+                    });
+                    
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        content.classList.add('hidden');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'text-primary', 'border-primary', 'border-b-2');
+                    this.classList.remove('text-text-secondary');
+                    
+                    // Show corresponding content
+                    const targetContent = document.getElementById(targetTab + '-tab');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        targetContent.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
